@@ -1,13 +1,13 @@
-package hello.hellospring;
+package Board.noticeBoard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HelloSpringApplication {
+public class NoticeBoardApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloSpringApplication.class, args);
+		SpringApplication.run(NoticeBoardApplication.class, args);
 	}
 
 }
