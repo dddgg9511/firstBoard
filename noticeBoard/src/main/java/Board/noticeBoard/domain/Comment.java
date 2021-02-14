@@ -3,7 +3,7 @@ package Board.noticeBoard.domain;
 public class Comment {
 	private long id;
 	
-	private long memberId;
+	private long author;
 	
 	private String text;
 	
@@ -17,12 +17,12 @@ public class Comment {
 		this.id = id;
 	}
 
-	public long getMemberId() {
-		return memberId;
+	public long getAuthor() {
+		return author;
 	}
 
-	public void setMemberId(long memberId) {
-		this.memberId = memberId;
+	public void setAuthor(long author) {
+		this.author = author;
 	}
 
 	public String getText() {
