@@ -20,7 +20,7 @@ public class PostService
 		return repository.findAll();
 	}
 	
-	public Optional<Post> findByID(int postNumber) {
+	public Optional<Post> findByID(Long postNumber) {
 		return repository.findByID(postNumber);
 	}
 	
@@ -28,11 +28,11 @@ public class PostService
 		return repository.save(post);
 	}
 	
-	public Boolean update(Post post) {
+	public Boolean update(Post post){
 		return repository.update(post);
 	}
 	
-	public Boolean delete(int postNumber) {
+	public Boolean delete(Long postNumber) {
 		return repository.deleteByID(postNumber);
 	}
 }

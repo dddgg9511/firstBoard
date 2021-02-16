@@ -13,11 +13,11 @@ public interface PostRepository {
 	
 	List<Post> findAll();
 	
-	Optional<Post> findByID(int postNumber);
+	Optional<Post> findByID(Long postNumber);
 	
 	long save(Post post);
 	
 	Boolean update(Post post);
 	
-	Boolean deleteByID(int postNumber);
+	Boolean deleteByID(Long postNumber);
 }

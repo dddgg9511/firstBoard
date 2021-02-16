@@ -5,12 +5,14 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import Board.noticeBoard.domain.Post;
 import Board.noticeBoard.service.PostService;
 
 @RestController
+@RequestMapping("/post")
 public class PostController {
 	@Autowired
 	private PostService postService;
@@ -20,8 +22,8 @@ public class PostController {
 		return postService.getList();
 	}
 	
-	@GetMapping("/{postID}")
-	public Optional<Post> findByID(int postNumber) {
+	@GetMapping("/{postNumber}")
+	public Optional<Post> findByID(Long postNumber) {
 		return postService.findByID(postNumber);
 	}
 	
@@ -33,7 +35,7 @@ public class PostController {
 		return postService.update(post);
 	}
 	
-	public Boolean delete(int postNumber) {
+	public Boolean delete(Long postNumber) {
 		return postService.delete(postNumber);
 	}
 }
