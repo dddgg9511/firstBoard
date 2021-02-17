@@ -15,6 +15,4 @@ public class Post {
 	private String body;
 	
 	private String dateTIme;
-
-	
 }

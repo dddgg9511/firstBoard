@@ -1,6 +1,5 @@
 package Board.noticeBoard.service;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,23 +15,23 @@ public class PostService
 	@Autowired
 	private PostRepository repository;
 	
-	public List<Post> getList(){
+	public Iterable<Post> getList(){
 		return repository.findAll();
 	}
 	
 	public Optional<Post> findByID(Long postNumber) {
-		return repository.findByID(postNumber);
+		return repository.findById(postNumber);
 	}
 	
-	public long save(Post post) {
+	public Post save(Post post) {
 		return repository.save(post);
 	}
 	
-	public Boolean update(Post post){
-		return repository.update(post);
+	public Post update(Post post){
+		return repository.save(post);
 	}
 	
-	public Boolean delete(Long postNumber) {
-		return repository.deleteByID(postNumber);
+	public void delete(Long postNumber) {
+		repository.deleteById(postNumber);
 	}
 }

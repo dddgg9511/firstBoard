@@ -1,15 +1,18 @@
 package Board.noticeBoard.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Member {
 	
-	
-	private long number;	//number is database key
+	@Id @GeneratedValue
 	private String id;		//id have to be unique
 	private String pw;		//
 	private String name;	//name can have duplication
 	
-	Member(long number, String id, String pw, String name){
-		this.number = number;
+	Member(String id, String pw, String name){
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
@@ -32,11 +35,5 @@ public class Member {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public long getNumber() {
-		return number;
-	}
-	public void setNumber(long number) {
-		this.number = number;
 	}
 }

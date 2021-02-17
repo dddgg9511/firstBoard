@@ -1,23 +1,8 @@
 package Board.noticeBoard.repository;
 
-import java.util.List;
-import java.util.Optional;
 
-import org.springframework.stereotype.Repository;
-
+import org.springframework.data.repository.CrudRepository;
 
 import Board.noticeBoard.domain.Post;
 
-@Repository
-public interface PostRepository {
-	
-	List<Post> findAll();
-	
-	Optional<Post> findByID(Long postNumber);
-	
-	long save(Post post);
-	
-	Boolean update(Post post);
-	
-	Boolean deleteByID(Long postNumber);
-}
+public interface PostRepository extends CrudRepository<Post, Long>{}
