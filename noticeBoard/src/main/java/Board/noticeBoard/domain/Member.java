@@ -7,12 +7,13 @@ import javax.persistence.Id;
 @Entity
 public class Member {
 	
-	@Id @GeneratedValue
+	@Id 
+	@GeneratedValue
 	private String id;		//id have to be unique
 	private String pw;		//
 	private String name;	//name can have duplication
 	
-	Member(String id, String pw, String name){
+	public Member(String id, String pw, String name){
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
