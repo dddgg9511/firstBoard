@@ -16,4 +16,9 @@ public class MemberRepositoryTest {
 		Member member = new Member("choo", "1234", "choo");
 		memberRepository.save(member);
 	}
+	
+	@Test
+	public void findAll() {
+		memberRepository.findAll();
+	}
 }

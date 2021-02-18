@@ -13,6 +13,8 @@ public class Member {
 	private String pw;		//
 	private String name;	//name can have duplication
 	
+	public Member() {}
+	
 	public Member(String id, String pw, String name){
 		this.id = id;
 		this.pw = pw;
