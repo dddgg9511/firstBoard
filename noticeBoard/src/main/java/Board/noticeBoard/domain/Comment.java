@@ -1,5 +1,13 @@
 package Board.noticeBoard.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Comment {
 	private long id;
 	
@@ -8,36 +16,4 @@ public class Comment {
 	private String text;
 	
 	private String dateTime;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public long getAuthor() {
-		return author;
-	}
-
-	public void setAuthor(long author) {
-		this.author = author;
-	}
-
-	public String getText() {
-		return text;
-	}
-
-	public void setText(String text) {
-		this.text = text;
-	}
-
-	public String getDateTime() {
-		return dateTime;
-	}
-
-	public void setDateTime(String dateTime) {
-		this.dateTime = dateTime;
-	}
 }
