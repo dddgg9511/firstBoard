@@ -1,18 +1,13 @@
 package Board.noticeBoard.dao;
 
 
+
+import org.mapstruct.Mapper;
+import org.springframework.stereotype.Repository;
+
 import Board.noticeBoard.domain.Member;
 
+@Mapper
+@Repository
 public interface MemberDAO extends CrudDAO<Member, String>{
-	/*
-	public List<Member> findAll();
-	
-	public Optional<Member> findById(String pk);
-
-	public void save(Member record);
-
-	public void update(Member record);
-
-	public void delete(String pk);
-	*/
 }

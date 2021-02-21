@@ -15,6 +15,10 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+ 	compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+	compile("org.mybatis:mybatis-spring")
+	compile("org.mybatis:mybatis")
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
 	runtimeOnly 'mysql:mysql-connector-java'
 	compileOnly 'org.projectlombok:lombok'
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.5.0'
