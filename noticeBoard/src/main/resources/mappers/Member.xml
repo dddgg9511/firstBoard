@@ -14,4 +14,36 @@
 			#{member_name}
 		)
 	</insert>
+	
+	<select id="findById" resultType="Board.noticeBoard.domain.Member">
+		SELECT *
+		FROM MEMBER
+		WHERE member_id = #{pk}
+	</select>
+	
+	<delete id="deleteAll">
+		DELETE FROM MEMBER
+	</delete>
+	
+	<select id="count" resultType="int">
+		SELECT COUNT(*)
+		FROM MEMBER
+	</select>
+	
+	<select id="findAll" resultType="Board.noticeBoard.domain.Member">
+		SELECT *
+		FROM MEMBER
+	</select>
+		
+	<delete id="deleteById">
+		DELETE FROM MEMBER
+		WHERE member_id = #{pk}
+	</delete>
+	
+	<update id="update" parameterType="Board.noticeBoard.domain.Member">
+		UPDATE MEMBER SET
+		member_name = #{member_name}
+		WHERE member_id = #{member_id}
+	</update>
+	
 </mapper>

@@ -13,5 +13,9 @@ public interface CrudDAO<DTO, PrimaryKey> {
 	
 	public void update(DTO record);
 	
-	public void delete(PrimaryKey pk);
+	public void deleteById(PrimaryKey pk);
+	
+	public void deleteAll();
+	
+	public int count();
 }
