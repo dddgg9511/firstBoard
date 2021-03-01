@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.google.common.base.FinalizablePhantomReference;
 
 import Board.noticeBoard.dao.MemberDAO;
 import Board.noticeBoard.domain.Member;
@@ -23,7 +22,13 @@ public class MemberService {
 		memberDAO.save(member);
 	}
 	public void signIn(String id, String password) {
-		
+		Optional<Member> findMember = memberDAO.findById(id);
+		findMember.ifPresent(mem -> {
+			if(mem.getPw() != password)
+			{
+				throw new RuntimeException();
+			}
+		});
 	}
 	
 	public void Leave(Member member) {
